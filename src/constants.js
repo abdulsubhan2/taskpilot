@@ -1,7 +1,8 @@
 export const loginData = {
     title: 'Login',
     loginIdPlaceholder: 'Id',
-    loginNamePlaceholder: 'Name'
+    loginNamePlaceholder: 'Name',
+    logout: 'Logout'
 }
 
 export const dashboardData = {

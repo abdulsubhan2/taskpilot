@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 * {
   box-sizing: border-box;
@@ -14,8 +13,8 @@ body {
 :root {
 
   /* Color palette and tokens */
-  --body-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --bg-page: #F4F4F6;
+  /* --body-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+  /* --bg-page: #F4F4F6; */
   --color-primary: #5285EC;
   --color-muted: #537178;
   --color-input-bg: #EEF1F8;
@@ -36,6 +35,7 @@ body {
   --primary-shadow-hover: rgba(82,133,236,0.18);
   --modal-width: min(296px, calc(100% - 24px));
   --modal-height: 193px;
+
 
 }
 

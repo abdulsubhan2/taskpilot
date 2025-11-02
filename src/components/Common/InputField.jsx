@@ -1,5 +1,3 @@
-import React from 'react'
-
 function InputField({ type, placeholder, value, onChange, className, icon, iconPosition }) {
     const wrapperStyles = {
         position: 'relative',

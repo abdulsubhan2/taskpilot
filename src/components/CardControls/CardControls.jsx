@@ -8,7 +8,6 @@ import TaskList from '../TaskList/TaskList';
 const TaskControls = ({ setSearchItem, searchItem, setIsNewTaskModalOpen, handletaskListEdit, editTask, deleteTask, taskList }) => {
     const [debouncedSearch, setDebouncedSearch] = useState('');
 
-    // debounce searchItem -> debouncedSearch
     useEffect(() => {
         const id = setTimeout(() => setDebouncedSearch(searchItem), 300);
         return () => clearTimeout(id);

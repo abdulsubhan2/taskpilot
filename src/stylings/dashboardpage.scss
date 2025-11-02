@@ -14,10 +14,8 @@
         margin: 12px auto !important;
         padding: 37 72px !important;
         border-radius: 0 !important;
-        text-align: center !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include text-center(true);
+        @include displayFlex(column, center);
         justify-content: center;
         z-index: 50;
 
@@ -26,7 +24,7 @@
         }
 
         &-text {
-            text-align: center;
+            @include text-center(false);
             font: normal normal 500 20px/28px 'Montserrat', sans-serif;
             letter-spacing: 0px;
             color: $color-muted;
@@ -49,12 +47,10 @@
         padding: 0;
 
         &-card-row {
-            flex-direction: column;
+            @include displayFlex(column, center);
             gap: 12px;
             margin-top: 12px;
-            display: flex;
             gap: 16px;
-            align-items: center;
 
             &-one,
             &-two,
@@ -71,21 +67,20 @@
                 }
             }
 
+            .latest-created-tasks {
+                color: #8F9EA2 !important;
+            }
+
             .latest-created-task-item {
                 font-size: 14px;
 
                 span {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    word-break: break-all;
+                    @include text-truncate;
                 }
             }
 
             .latest-created-task-item.completed {
-                text-decoration: line-through;
+                @include text-lineThrough;
             }
 
             .completed-tasks {
@@ -97,10 +92,7 @@
             }
 
             .total-tasks {
-                font: normal normal 500 20px/24px 'Montserrat', sans-serif;
-                letter-spacing: 0px;
-                color: #8F9EA2;
-                opacity: 1;
+                @include fontSizeTwenty(#8F9EA2);
             }
 
         }
@@ -111,15 +103,13 @@
 
             .tasks-controls {
                 margin-bottom: 16px;
-                text-align: center;
+                @include text-center(false);
 
                 &-actions {
                     margin-top: 8px;
                     width: 100%;
                     padding: 0 12px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: normal;
+                    @include displayFlex(column, normal);
 
                     .tasks-search-input-wrapper {
                         margin-bottom: 8px !important;
@@ -135,8 +125,7 @@
                 }
 
                 &-title {
-                    font: normal normal 500 20px/24px 'Montserrat', sans-serif;
-                    color: $color-muted;
+                    @include fontSizeTwenty($color-muted);
                     margin-bottom: 8px;
                 }
             }
@@ -145,30 +134,23 @@
             .cards-list-card {
 
                 .task-card {
-                    display: flex;
+                    @include displayFlex(row, center);
                     justify-content: space-between;
-                    align-items: center;
                     padding: 27px 35px 27px 24px;
 
                     .task-left {
-                        display: flex;
-                        align-items: center;
+                    @include displayFlex(row, center);
                         gap: 12px;
 
                         .task-name {
                             color: $color-primary;
                             font: normal normal 500 20px/24px 'Montserrat', sans-serif;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 1;
-                            -webkit-box-orient: vertical;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            word-break: break-all;
+                            @include text-truncate;
                         }
 
                         .task-name.completed {
-                            text-decoration: line-through;
-                            color: #537178;
+                            @include text-lineThrough;
+                            color: $color-muted;
                         }
 
                         .custom-checkbox {
@@ -197,7 +179,7 @@
                                 height: 19px;
                                 width: 19px;
                                 background-color: transparent;
-                                border: 2px solid #537178;
+                                border: 2px solid $color-muted;
                                 border-radius: 4px;
                                 cursor: pointer;
                                 transition: all 0.2s ease;
@@ -212,7 +194,7 @@
                                 top: -8px;
                                 width: 6px;
                                 height: 20px;
-                                border: solid #537178;
+                                border: solid $color-muted;
                                 border-width: 0 3px 3px 0;
                                 transform: rotate(45deg);
                             }
@@ -226,9 +208,8 @@
                     }
 
                     .task-actions {
-                        display: flex;
+                        @include displayFlex(row, center);
                         gap: 12px;
-                        align-items: center;
 
                         button {
                             background: transparent;
@@ -260,7 +241,7 @@
                     opacity: 1;
                 }
 
-                .task-card-separator :last-child {
+                .task-card-separator:last-child {
                     display: none;
                 }
             }
@@ -272,7 +253,7 @@
     .dashboard-page {
         &-no-tasks-card {
             width: 304px !important;
-            text-align: center !important;
+            @include text-center(true);
             position: fixed !important;
             left: 50%;
             top: 50%;
@@ -304,9 +285,7 @@
                 width: 100%;
 
                 .tasks-controls {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
+                    @include displayFlex(row, center);
                     justify-content: space-between;
 
                     &-title {
@@ -322,6 +301,7 @@
                             width: 244px !important;
                             margin-bottom: 0 !important;
                             margin-right: 12px;
+
                             .tasks-search-input {
                                 margin-bottom: 0 !important;
                             }

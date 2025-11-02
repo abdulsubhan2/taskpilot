@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Card({ children, width, height, className, title, padding, titleAlign }) {
   const style = { boxSizing: 'border-box', opacity: 1, boxShadow: '0px 3px 6px #00000029', borderRadius: '12px',
     background: '#FFFFFF 0% 0% no-repeat padding-box' }

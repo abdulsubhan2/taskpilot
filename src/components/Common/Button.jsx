@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Button({ onClick, label, type, className='' }) {
   const buttonStyle = {
     height: '40px',

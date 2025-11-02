@@ -1,4 +1,3 @@
-// import React from 'react'
 import Card from '../Common/Card';
 import { dashboardData } from '../../constants';
 import PieChart from '../Common/PieChart';
