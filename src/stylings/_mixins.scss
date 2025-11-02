@@ -1,0 +1,24 @@
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-base($padding: $card-padding) {
+  background: $color-white;
+  border-radius: $radius-md;
+  padding: $padding;
+  box-shadow: $card-shadow;
+  box-sizing: border-box;
+}
+
+@mixin btn-primary($width: auto, $height: $input-height) {
+  border: none;
+  width: $width;
+  height: $height;
+  background: $color-primary;
+  border-radius: $radius-sm;
+  color: $color-white;
+  font: normal normal 500 14px/18px 'Montserrat', sans-serif;
+}

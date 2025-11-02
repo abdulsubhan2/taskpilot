@@ -7,7 +7,112 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* Color palette and tokens */
+  --body-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --bg-page: #F4F4F6;
+  --color-primary: #5285EC;
+  --color-muted: #537178;
+  --color-input-bg: #EEF1F8;
+  --color-input-text: #7A7D7E;
+  --color-white: #FFFFFF;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  --card-padding: 24px;
+  --card-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  --modal-shadow: 0px 3px 6px rgba(0,0,0,0.04);
+
+  --input-height: 40px;
+  --input-padding: 11px 16px;
+  --input-focus-shadow: rgba(79,126,240,0.12);
+  --input-focus-border: rgba(79,126,240,0.3);
+  --primary-shadow-hover: rgba(82,133,236,0.18);
+  --modal-width: min(296px, calc(100% - 24px));
+  --modal-height: 193px;
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-container {
+  background: var(--color-white) 0% 0% no-repeat padding-box;
+  border-radius: var(--radius-md);
+  width: var(--modal-width);
+  height: var(--modal-height);
+  padding: var(--card-padding);
+  animation: slideIn 0.25s ease-out;
+  box-shadow: var(--modal-shadow);
+}
+
+/* Place modal lower on small screens so it's 84px from the top */
+@media (max-width: 420px) {
+  .modal-backdrop {
+    align-items: flex-start;
+    padding-top: 84px;
+  }
+  .modal-container {
+    margin-top: 0;
+  }
+}
+
+
+
+.modal-header {
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font: normal normal 500 20px/24px 'Montserrat', sans-serif;
+  letter-spacing: 0px;
+  color: var(--color-muted);
+  opacity: 1;
+  font-size: 20px;
+}
+
+
+
+.add-new-task-input {
+  width: 100%;
+}
+
+.add-new-task-modal-button {
+  border: none;
+  width: 100%;
+  height: var(--input-height);
+  background: var(--color-primary) 0% 0% no-repeat padding-box;
+  border-radius: var(--radius-sm);
+  font: normal normal 500 14px/18px 'Montserrat', sans-serif;
+  color: var(--color-white);
+}
+
+.add-new-task-modal-button:hover {
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+@media (max-width: 420px)  {
+  .card {
+    border-radius: 0 !important;
+  }
 }

@@ -1,0 +1,23 @@
+// Design tokens
+$bg-page: #F4F4F6;
+$color-primary: #5285EC;
+$color-muted: #537178;
+$color-input-bg: #EEF1F8;
+$color-input-text: #7A7D7E;
+$color-white: #FFFFFF;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+
+$card-padding: 20px;
+$card-shadow: 0 2px 6px rgba(0,0,0,0.06);
+$modal-shadow: 0px 3px 6px rgba(0,0,0,0.04);
+
+$input-height: 40px;
+$input-padding: 11px 16px;
+
+// Focus and shadow tokens
+$input-focus-shadow: rgba(86,112,117,0.06);
+$input-focus-border: rgba(86,112,117,0.18);
+$primary-shadow-hover: rgba(79,126,240,0.16);
+$primary-shadow: rgba(79,126,240,0.14);
